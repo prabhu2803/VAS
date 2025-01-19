@@ -1,0 +1,22 @@
+import "@/styles/globals.css"
+import { Inter } from 'next/font/google'
+
+const inter = Inter({ subsets: ["latin"] })
+
+export const metadata = {
+  title: "Vijay Autostores - Heavy Vehicle Parts in Madurai",
+  description: "Your one-stop shop for heavy vehicle parts in Madurai. We offer a wide range of parts for trucks and buses, expert advice, and fast delivery.",
+}
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <html lang="en" className="dark scroll-smooth">
+      <body className={inter.className}>{children}</body>
+    </html>
+  )
+}
+

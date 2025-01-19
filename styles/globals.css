@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 222 47% 11%;
+  --foreground: 210 40% 98%;
+  --card: 222 47% 11%;
+  --card-foreground: 210 40% 98%;
+  --popover: 222 47% 11%;
+  --popover-foreground: 210 40% 98%;
+  --primary: 217 91% 60%;
+  --primary-foreground: 222 47% 11%;
+  --secondary: 217 32% 17%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 217 32% 17%;
+  --muted-foreground: 215 20.2% 65.1%;
+  --accent: 217 32% 17%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 217 32% 17%;
+  --input: 217 32% 17%;
+  --ring: 224.3 76.3% 48%;
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.site-gradient {
+  background: linear-gradient(135deg, 
+    #000020 0%, 
+    #001253 50%,
+    #000020 100%
+  );
+  background-attachment: fixed;
+}
+
+.hero-gradient {
+  background: linear-gradient(90deg, 
+    rgba(0,0,32,0.95) 0%, 
+    rgba(0,0,32,0.8) 30%,
+    rgba(0,0,32,0.6) 60%,
+    rgba(0,0,32,0) 100%
+  );
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #3b82f6 0%, #9333ea 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Responsive Typography */
+@layer utilities {
+  .h1 {
+    @apply text-4xl font-bold md:text-5xl lg:text-6xl;
+  }
+  .h2 {
+    @apply text-3xl font-bold md:text-4xl lg:text-5xl;
+  }
+  .h3 {
+    @apply text-2xl font-bold md:text-3xl lg:text-4xl;
+  }
+  .h4 {
+    @apply text-xl font-bold md:text-2xl lg:text-3xl;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+.fancy-font {
+  font-family: 'Playfair Display', serif;
+}
+
+.parallax {
+  overflow: hidden;
+  letter-spacing: -2px;
+  line-height: 0.8;
+  margin: 0;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.scroller {
+  display: flex;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.scroller > img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 2rem;
+}
+
+/* About page styles */
+.about-gradient {
+  background: linear-gradient(135deg, #000020 0%, #001253 100%);
+}
+
+.about-text-gradient {
+  background: linear-gradient(90deg, #3b82f6, #9333ea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Responsive iframe */
+.aspect-w-16 {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.aspect-w-16 > iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
